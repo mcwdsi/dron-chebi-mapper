@@ -124,7 +124,7 @@ public class ChebiClassSearcher {
                                 sm.field = MatchedField.PREF_LABEL;
                                 sm.searchString = key.label;
                                 sm.matchedString = prefLabel;
-                                System.out.println("EXACT MATCH PREFLABEL: " + key.label + "\t" + prefLabel);
+                                //System.out.println("EXACT MATCH PREFLABEL: " + key.label + "\t" + prefLabel);
                                 sm.classIriTxt = getChebiIriTxtFromNode(node);
                                 if (paramsToMatches.containsKey(key)) {
                                     ArrayList<SearchMatch> matches = paramsToMatches.get(key);
@@ -140,7 +140,7 @@ public class ChebiClassSearcher {
                                 sm.field = MatchedField.PREF_LABEL;
                                 sm.searchString = key.label;
                                 sm.matchedString = prefLabel;
-                                System.out.println("CASE INSENSITIVE MATCH PREFLABEL: "+ key.label + "\t" + prefLabel);
+                                //System.out.println("CASE INSENSITIVE MATCH PREFLABEL: "+ key.label + "\t" + prefLabel);
                                 sm.classIriTxt = getChebiIriTxtFromNode(node);
                                 if (paramsToMatches.containsKey(key)) {
                                     ArrayList<SearchMatch> matches = paramsToMatches.get(key);
@@ -164,7 +164,7 @@ public class ChebiClassSearcher {
                                     sm.field = MatchedField.SYNONYM;
                                     sm.searchString = key.label;
                                     sm.matchedString = synonym;
-                                    System.out.println("EXACT MATCH SYNONYM: " + key.label + "\t" + synonym);
+                                    //System.out.println("EXACT MATCH SYNONYM: " + key.label + "\t" + synonym);
                                     sm.classIriTxt = getChebiIriTxtFromNode(node);
                                     if (paramsToMatches.containsKey(key)) {
                                         ArrayList<SearchMatch> matches = paramsToMatches.get(key);
@@ -180,7 +180,7 @@ public class ChebiClassSearcher {
                                     sm.field = MatchedField.SYNONYM;
                                     sm.searchString = key.label;
                                     sm.matchedString = synonym;
-                                    System.out.println("CASE INSENSITIVE MATCH SYNONYM: "+ key.label + "\t" + synonym);
+                                    //System.out.println("CASE INSENSITIVE MATCH SYNONYM: "+ key.label + "\t" + synonym);
                                     sm.classIriTxt = getChebiIriTxtFromNode(node);
                                     if (paramsToMatches.containsKey(key)) {
                                         ArrayList<SearchMatch> matches = paramsToMatches.get(key);
@@ -192,9 +192,9 @@ public class ChebiClassSearcher {
                                     }
                             }
                             }
-                        } else {
-                            System.out.println("RESULT HAS NO SYNONYMS");
-                        }
+                        } //else {
+                            //System.out.println("RESULT HAS NO SYNONYMS");
+                        //}
                     }
                 }
             }
@@ -208,7 +208,7 @@ public class ChebiClassSearcher {
         if (value != null) {
             iriTxt = value.asText();
         }
-        System.out.println("CHEBI IRI text: " + iriTxt);
+        //System.out.println("CHEBI IRI text: " + iriTxt);
         return iriTxt;
     }
 
